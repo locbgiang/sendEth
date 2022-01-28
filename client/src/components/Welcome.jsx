@@ -33,11 +33,11 @@ const Welcome = () => {
         <div className="flex w-full justify-center items-center">
             <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
                 <div className=" flex flex-1 justify-start flex-col mf:mr-10">
-                    <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
-                        Send Crypto <br /> across the world
+                    <h1 className="text-3xl sm:text-5xl text-white py-1">
+                        Send Ethereum <br /> across the world
                     </h1>
                     <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-                        Explore the crypto world. Buy and sell cryptocurrency on Coinbase.
+                        Explore the crypto world. Connect your <a className='font-bold' href='https://metamask.io'>metamask wallet</a> to get started.
                     </p>
                     {! currentAccount && // if there is a metamask acc connected dont render button
                         <button
@@ -52,22 +52,22 @@ const Welcome = () => {
                     }
                     <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
                         <div className={`rounded-tl-2xl ${commonStyles}`}>
-                            Reliability
+                            Decentralized
                         </div>
                         <div className={commonStyles}>
-                            Security
+                            Secure
                         </div>
                         <div className={`rounded-tr-2xl ${commonStyles}`}>
-                            Ethereum
+                            Trustless
                         </div>
                         <div className={`rounded-bl-2xl ${commonStyles}`}>
-                            Web 3.0
+                            Reliable
                         </div>
                         <div className={commonStyles}>
-                            Low Fees
+                            Fast
                         </div>
                         <div className={`rounded-br-2xl ${commonStyles}`}>
-                            Blockchain
+                            Low Fees
                         </div>
                     </div>
                 </div>
