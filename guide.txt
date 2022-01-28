@@ -4,3 +4,9 @@
 4.  install tailwind https://tailwindcss.com/docs/guides/create-react-app
 5.  install react icons:  npm install react-icons
 6.  install ether: npm install ethers
+7.  build scripts and hardhat.config.js
+8.  npx hardhat run scripts/deploy.js --network ropsten
+9.  Create constant.js in /client/src/utils
+10. export const contractAddress = '0xbA1edC220D8A9f519e7eB1f2DDe0c0C20BA1030d'; inside constant
+11. get abi from Transaction.json under /smart_contract/artifacts/contracts/tranction.sol/
+12. copy json file to /client/src/utils
