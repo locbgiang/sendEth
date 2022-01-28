@@ -15,14 +15,25 @@ const NavbarItem = ({ title, classProps }) => {
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     return (
-        <nav className="w-full flex md:justify-center justify-between item-center p-4"> 
+        <nav className="w-full flex md:justify-center justify-between item-center p-4 "> 
             <div className="md:flex-[0.5] flex-initial justify-center items-center">
                 <img src={logo} alt='logo' className="w-10 cursor-pointer" />
             </div>
-            <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-                {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index)=>(
+            <ul className="w-1/4 text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
+                {/*["Market", "Exchange", "Tutorials", "Wallets"].map((item, index)=>(
                     <NavbarItem key={item + index} title={item} />
-                ))}
+                ))*/}
+                {/* 
+                <div className='flex w-full justify-between'>
+                    <a>Market</a>
+                    <a>Exchange</a>
+                    <a>Tutorials</a>
+                    <a>Wallets</a>
+                </div>*/}
+                <a href='https://coinmarketcap.com'>Market</a>
+                <a href='https://coinmarketcap.com/rankings/exchanges/'>Exchange</a>
+                <a href='https://www.coinbase.com/learn/tips-and-tutorials'>Tutorials</a>
+                <a href='https://metamask.io'>Wallets</a>
                 <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
                     Login
                 </li>
