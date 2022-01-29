@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
-
 import logo from '../../images/logo.png';
+
+import { TransactionContext } from '../context/TransactionContext';
+import { shortenAddress } from '../utils/shortenAddress';
 
 const NavbarItem = ({ title, classProps }) => {
     return (
@@ -14,30 +16,35 @@ const NavbarItem = ({ title, classProps }) => {
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
+    const { connectWallet, currentAccount, formData, handleChange, sendTransaction, isLoading } = useContext(TransactionContext);
     return (
         <nav className="w-full flex md:justify-center justify-between item-center p-4 "> 
             <div className="md:flex-[0.5] flex-initial justify-center items-center">
                 <img src={logo} alt='logo' className="w-10 cursor-pointer" />
             </div>
-            <ul className="w-1/4 text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-                {/*["Market", "Exchange", "Tutorials", "Wallets"].map((item, index)=>(
-                    <NavbarItem key={item + index} title={item} />
-                ))*/}
-                {/* 
-                <div className='flex w-full justify-between'>
-                    <a>Market</a>
-                    <a>Exchange</a>
-                    <a>Tutorials</a>
-                    <a>Wallets</a>
-                </div>*/}
+            <div className="w-1/2 px-10 text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
                 <a href='https://coinmarketcap.com'>Market</a>
                 <a href='https://coinmarketcap.com/rankings/exchanges/'>Exchange</a>
                 <a href='https://www.coinbase.com/learn/tips-and-tutorials'>Tutorials</a>
                 <a href='https://metamask.io'>Wallets</a>
-                <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-                    Login
-                </li>
-            </ul>
+            </div>
+            <div className="w-1/7 text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
+                {! currentAccount && // if there is a metamask acc connected dont render button
+                    <button 
+                        onClick={connectWallet}
+                        className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]"
+                    >
+                        Connect
+                    </button>
+                }
+                {currentAccount && // if there is a metamask acc connected dont render button
+                    <button 
+                        className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]"
+                    >
+                        {shortenAddress(currentAccount)}
+                    </button>
+                }
+            </div>
             <div className="flex relative">
                     {toggleMenu
                         ? <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={ ()=> setToggleMenu(false) } />
