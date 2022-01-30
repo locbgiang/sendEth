@@ -37,7 +37,7 @@ const Welcome = () => {
                         Send Ethereum <br /> across the world
                     </h1>
                     <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-                        Explore the crypto world. Connect your <a className='font-bold' href='https://metamask.io'>metamask wallet</a> to get started.
+                        Transfer your ETH, mainnet or any testnet. Connect your <a className='font-bold' href='https://metamask.io'>metamask wallet</a> to get started.
                     </p>
                     {! currentAccount && // if there is a metamask acc connected dont render button
                         <button

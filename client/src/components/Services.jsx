@@ -37,13 +37,13 @@ const Services = () => {
                     color = "bg-[#8945F8]"
                     title = "Trustless and Decentralized"
                     icon = {<BiSearchAlt frontSize={21} className="text-white"/>}
-                    subtitle = "Transactions do not require a centralized entity."
+                    subtitle = "Transactions are decentralized and do not require trusting banks or institutions."
                 />
                 <ServiceCard 
                     color = "bg-[#F84550]"
                     title = "Fastest Transactions"
                     icon = {<RiHeart2Fill frontSize={21} className="text-white"/>}
-                    subtitle = "Move values in seconds from anywhere to anywhere."
+                    subtitle = "Move values in seconds to anywhere."
                 />
             </div>
         </div>
