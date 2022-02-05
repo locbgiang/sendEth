@@ -59,9 +59,13 @@ const Navbar = () => {
                             <li className="text-xl w-full my-2">
                                 <AiOutlineClose onClick={()=> setToggleMenu(false)} />
                             </li>
-                            {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index)=>(
+                            {/*["Market", "Exchange", "Tutorials", "Wallets"].map((item, index)=>(
                                 <NavbarItem key={item + index} title={item} classProps="my-2 text-lg"/>
-                            ))}
+                            ))*/}
+                            <a className='my-2 text-lg' href='https://coinmarketcap.com'>Market</a>
+                            <a className='my-2 text-lg' href='https://coinmarketcap.com/rankings/exchanges/'>Exchange</a>
+                            <a className='my-2 text-lg' href='https://www.coinbase.com/learn/tips-and-tutorials'>Tutorials</a>
+                            <a className='my-2 text-lg' href='https://metamask.io'>Wallets</a>
                         </ul>
                     )}
                     

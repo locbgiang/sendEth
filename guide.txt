@@ -1,5 +1,5 @@
 1.  create two folders, client and smart_contract
-2.  cd into client, terminal: nmp init vite@latest
+2.  cd into client, terminal: npm init vite@latest
 3.  npm install
 4.  install tailwind https://tailwindcss.com/docs/guides/create-react-app
 5.  install react icons:  npm install react-icons
