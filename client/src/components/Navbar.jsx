@@ -6,14 +6,6 @@ import logo from '../../images/logo.png';
 import { TransactionContext } from '../context/TransactionContext';
 import { shortenAddress } from '../utils/shortenAddress';
 
-const NavbarItem = ({ title, classProps }) => {
-    return (
-        <li className={`mx-4 cursor-pointer ${classProps}`}>
-            {title}
-        </li>
-    )
-};
-
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const { connectWallet, currentAccount, formData, handleChange, sendTransaction, isLoading } = useContext(TransactionContext);
@@ -23,10 +15,10 @@ const Navbar = () => {
                 <img src={logo} alt='logo' className="w-10 cursor-pointer" />
             </div>
             <div className="w-1/2 px-10 text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-                <a href='https://coinmarketcap.com'>Market</a>
-                <a href='https://coinmarketcap.com/rankings/exchanges/'>Exchange</a>
-                <a href='https://www.coinbase.com/learn/tips-and-tutorials'>Tutorials</a>
-                <a href='https://metamask.io'>Wallets</a>
+                <a className='mx-4 cursor-pointer' href='https://coinmarketcap.com'>Market</a>
+                <a className='mx-4 cursor-pointer' href='https://coinmarketcap.com/rankings/exchanges/'>Exchange</a>
+                <a className='mx-4 cursor-pointer' href='https://www.coinbase.com/learn/tips-and-tutorials'>Tutorials</a>
+                <a className='mx-4 cursor-pointer' href='https://metamask.io'>Wallets</a>
             </div>
             <div className="w-1/7 text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
                 {! currentAccount && // if there is a metamask acc connected dont render button
@@ -59,16 +51,12 @@ const Navbar = () => {
                             <li className="text-xl w-full my-2">
                                 <AiOutlineClose onClick={()=> setToggleMenu(false)} />
                             </li>
-                            {/*["Market", "Exchange", "Tutorials", "Wallets"].map((item, index)=>(
-                                <NavbarItem key={item + index} title={item} classProps="my-2 text-lg"/>
-                            ))*/}
-                            <a className='my-2 text-lg' href='https://coinmarketcap.com'>Market</a>
-                            <a className='my-2 text-lg' href='https://coinmarketcap.com/rankings/exchanges/'>Exchange</a>
-                            <a className='my-2 text-lg' href='https://www.coinbase.com/learn/tips-and-tutorials'>Tutorials</a>
-                            <a className='my-2 text-lg' href='https://metamask.io'>Wallets</a>
+                            <a className='mx-4 cursor-pointer my-2 text-lg' href='https://coinmarketcap.com'>Market</a>
+                            <a className='mx-4 cursor-pointer my-2 text-lg' href='https://coinmarketcap.com/rankings/exchanges/'>Exchange</a>
+                            <a className='mx-4 cursor-pointer my-2 text-lg' href='https://www.coinbase.com/learn/tips-and-tutorials'>Tutorials</a>
+                            <a className='mx-4 cursor-pointer my-2 text-lg' href='https://metamask.io'>Wallets</a>
                         </ul>
                     )}
-                    
             </div>
         </nav>
     )
