@@ -10,7 +10,7 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const { connectWallet, currentAccount, formData, handleChange, sendTransaction, isLoading } = useContext(TransactionContext);
     return (
-        <nav className="w-full flex md:justify-center justify-between item-center p-4 "> 
+        <nav className="w-full flex md:justify-center justify-between item-center p-4"> 
             <div className="md:flex-[0.5] flex-initial justify-center items-center">
                 <img src={logo} alt='logo' className="w-10 cursor-pointer" />
             </div>
