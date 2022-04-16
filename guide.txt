@@ -3,6 +3,8 @@
 3.  npm install
 4.  install tailwind https://tailwindcss.com/docs/guides/create-react-app
 5.  install react icons:  npm install react-icons
+
+init smart contract: npm init -y
 6.  install ether: npm install ethers
 7.  build scripts and hardhat.config.js
 8.  npx hardhat run scripts/deploy.js --network ropsten

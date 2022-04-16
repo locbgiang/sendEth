@@ -31,12 +31,12 @@ const Welcome = () => {
     }
     return (
         <div className="flex w-full justify-center items-center">
-            <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
+            <div className="flex mf:flex-col flex-col items-start justify-between md:p-20 py-12 px-4">
                 <div className=" flex flex-1 justify-start flex-col mf:mr-10">
-                    <h1 className="text-3xl sm:text-5xl text-white py-1">
+                    <h1 className="flex flex-row justify-center text-3xl sm:text-5xl text-white py-1">
                         Send Ethereum <br /> across the world
                     </h1>
-                    <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
+                    <p className="text-left mt-5 text-white font-light md:w-12/12 w-11/12 text-base">
                         Transfer your ETH through mainnet or any testnet. Connect your <a className='font-bold' href='https://metamask.io'>metamask wallet</a> to get started.
                     </p>
                     {! currentAccount && // if there is a metamask acc connected dont render button
@@ -61,6 +61,7 @@ const Welcome = () => {
                             </p>    
                         </button>
                     }
+                    {/*
                     <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
                         <div className={`rounded-tl-2xl ${commonStyles}`}>
                             Decentralized
@@ -80,7 +81,7 @@ const Welcome = () => {
                         <div className={`rounded-br-2xl ${commonStyles}`}>
                             Low Fees
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
                     <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">

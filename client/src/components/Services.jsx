@@ -26,6 +26,7 @@ const Services = () => {
                     </h1>
                 </div>
             </div>
+            {/* 
             <div className='flex-1 flex flex-col justify-start items-center'>
                 <ServiceCard 
                     color = "bg-[#2952E3]"
@@ -45,7 +46,7 @@ const Services = () => {
                     icon = {<RiHeart2Fill frontSize={21} className="text-white"/>}
                     subtitle = "Move values in seconds to anywhere."
                 />
-            </div>
+            </div>*/}
         </div>
     )
 }
