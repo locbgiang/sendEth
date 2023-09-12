@@ -9,6 +9,7 @@ import { shortenAddress } from '../utils/shortenAddress';
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const { connectWallet, currentAccount, formData, handleChange, sendTransaction, isLoading } = useContext(TransactionContext);
+    console.log('here', useContext(TransactionContext))
     return (
         <nav className="w-full flex md:justify-center justify-between item-center p-4"> 
             <div className="md:flex-[0.5] flex-initial justify-center items-center">
